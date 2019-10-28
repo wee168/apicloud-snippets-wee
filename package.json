@@ -1,0 +1,25 @@
+{
+  "name": "apicloud-snippets-wee",
+  "publisher": "Wee",
+  "description": "APICloud Snippets Wee",
+  "version": "0.0.1",
+  "engines": { "vscode": "0.10.x" },
+  "categories": ["Snippets"], 
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wee168/apicloud-snippets-wee"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets-wee.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/snippets-wee.json"
+      }
+    ]
+  }
+}
