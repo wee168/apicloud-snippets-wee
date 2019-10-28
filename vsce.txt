@@ -1,0 +1,8 @@
+无论是本地打包还是发布到应用市场都需要借助vsce这个工具。
+
+安装：
+
+npm i vsce -g
+打包成vsix文件：
+
+vsce package
