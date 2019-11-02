@@ -7926,4 +7926,393 @@
       "});"
     ]
   }
+  ,
+  "app.apiready": {
+    "prefix": "app-apiready",
+    "description": "通用页面初始执行项(ShuoXun.js)",
+    "body": [
+      "//通用页面初始执行项",
+      "//@param refresh       是否注册下拉刷新",
+      "//@param scrollBottom  是否注册上拉加载",
+      "//@param callback      处理右边按钮执行",
+      "//###命令:app-apiready",
+      "app.apiready(true, false, function (ret, err) {",
+      "})"
+    ]
+  }
+  ,
+  "app.openNavWin": {
+    "prefix": "app-openNavWin",
+    "description": "打开Layout高级窗口(ShuoXun.js)",
+    "body": [
+      "//打开Layout高级窗口",
+      "//@param url    Frame文件名",
+      "//@param title  窗口标题文本",
+      "//@param pageParam      需传递JSON对象",
+      "//###命令:app-openNavWin",
+      "app.openNavWin({",
+      "\t    url: './main.html',",
+      "\t    title: '标题',",
+      "\t    pageParam: {",
+      "\t    }",
+      "})"
+    ]
+  }
+  ,
+  "app.loginOpenNavWin": {
+    "prefix": "app-loginOpenNavWin",
+    "description": "打开需会员身份验证的Layout高级窗口(ShuoXun.js)",
+    "body": [
+      "//打开需会员身份验证的Layout高级窗口",
+      "//@param pageParam      页面传参",
+      "//###命令:app-loginOpenNavWin",
+      "app.loginOpenNavWin({",
+      "\t    url: './main.html',",
+      "\t    title: '标题',",
+      "\t    pageParam: {",
+      "\t    }",
+      "})"
+    ]
+  }
+  ,
+  "app.openWin": {
+    "prefix": "app-openWin",
+    "description": "打开新的窗口(ShuoXun.js)",
+    "body": [
+      "//打开新的窗口",
+      "//@param urlWindow文件名",
+      "//@param pageParam  需传递JSON对象",
+      "//###命令:app-openWin",
+      "app.openWin({",
+      "\t    url: './main.html',",
+      "\t    pageParam: {",
+      "\t    }",
+      "})"
+    ]
+  }
+  ,
+  "app.loginOpenWin": {
+    "prefix": "app-loginOpenWin",
+    "description": "打开需会员身份验证的新窗口(ShuoXun.js)",
+    "body": [
+      "//打开需会员身份验证的新窗口",
+      "//@param pageParam      页面传参",
+      "//###命令:app-loginOpenWin",
+      "app.loginOpenWin({",
+      "\t    url: './main.html',",
+      "\t    pageParam: {",
+      "\t    }",
+      "})"
+    ]
+  }
+  ,
+  "app.closeWin": {
+    "prefix": "app-closeWin",
+    "description": "关闭当前窗口(ShuoXun.js)",
+    "body": [
+      "//关闭当前窗口",
+      "//@param name       窗口名称",
+      "//###命令:app-closeWin",
+      "app.closeWin()"
+    ]
+  }
+  ,
+  "app.closeToWin": {
+    "prefix": "app-closeToWin",
+    "description": "关闭除目标的所有窗口(ShuoXun.js)",
+    "body": [
+      "//关闭除目标的所有窗口",
+      "//@param name      窗口名称",
+      "//###命令:app-closeToWin",
+      "app.closeToWin()"
+    ]
+  }
+  ,
+  "app.openFrame": {
+    "prefix": "app-openFrame",
+    "description": "打开标准Frame(ShuoXun.js)",
+    "body": [
+      "//打开标准Frame",
+      "//@param urlFrame文件名",
+      "//@param pageParam  需传递JSON对象",
+      "//@param header     标题的dom对象，用于获取高度",
+      "//###命令:app-openFrame",
+      "app.openFrame({",
+      "\t    url: './main_fram.html',",
+      "\t    header: $api.byId('header'),",
+      "\t    pageParam: {",
+      "\t    }",
+      "})"
+    ]
+  }
+  ,
+  "app.closeFrame": {
+    "prefix": "app-closeFrame",
+    "description": "关闭当前Frame(ShuoXun.js)",
+    "body": [
+      "//关闭当前Frame",
+      "//@param name      Frame名称",
+      "//###命令:app-closeFrame",
+      "app.closeFrame()"
+    ]
+  }
+  ,
+  "app.ajax": {
+    "prefix": "app-ajax",
+    "description": "AJAX通用处理异步返回数据(ShuoXun.js)",
+    "body": [
+      "//AJAX通用处理异步返回数据",
+      "//@param apiName接口名称",
+      "//@param method 接口协议 ",
+      "//@param apiParam       接口参数",
+      "//###命令:app-ajax",
+      "app.ajax({",
+      "\t    apiName: 'api/type/name',",
+      "\t    method: 'post',",
+      "\t    apiParam: {",
+      "\t value: ''",
+      "\t    }",
+      "})"
+    ]
+  }
+  ,
+  "app.toast": {
+    "prefix": "app-toast",
+    "description": "显示底部气泡提示(ShuoXun.js)",
+    "body": [
+      "//显示底部气泡提示",
+      "//@param    提示文本",
+      "//###命令:app-toast",
+      "app.toast('Hello')"
+    ]
+  }
+  ,
+  "app.alert": {
+    "prefix": "app-alert",
+    "description": "弹出信息提示框(ShuoXun.js)",
+    "body": [
+      "//弹出信息提示框",
+      "//@param    提示文本",
+      "//###命令:app-alert",
+      "app.alert('Hello', function (ret, err) {",
+      "\t});"
+    ]
+  }
+  ,
+  "app.openAlert": {
+    "prefix": "app-openAlert",
+    "description": "弹出美化信息提示框（单按钮）(ShuoXun.js)",
+    "body": [
+      "//弹出美化信息提示框（单按钮）",
+      "//@param msg提示文本",
+      "//@param rightBtnTitle      按钮文本",
+      "//@param icon       标题图标",
+      "//###命令:app-openAlert",
+      "app.openAlert({",
+      "\t    msg: 'Hello',",
+      "\t    rightBtnTitle: '确认'",
+      "\t}, function (ret) {",
+      "\t});"
+    ]
+  }
+  ,
+  "app.openConfirm": {
+    "prefix": "app-openConfirm",
+    "description": "弹出美化信息提示框（双按钮）(ShuoXun.js)",
+    "body": [
+      "//弹出美化信息提示框（双按钮）",
+      "//@param msg提示文本",
+      "//@param leftBtnTitle       左按钮文本",
+      "//@param rightBtnTitle      右按钮文本",
+      "//###命令:app-openAlert",
+      "app.openConfirm({",
+      "\t    msg: 'Hello',",
+      "\t    leftBtnTitle: '取消',",
+      "\t    rightBtnTitle: '确认'",
+      "\t}, function (ret) {",
+      "\t});"
+    ]
+  }
+  ,
+  "app.openShare": {
+    "prefix": "app-openShare",
+    "description": "弹出美化信息提示框（双按钮）(ShuoXun.js)",
+    "body": [
+      "//弹出美化信息提示框（双按钮）",
+      "//###命令:app-openShare",
+      "app.openShare(function (ret) {",
+      "\t});"
+    ]
+  }
+  ,
+  "app.openLoading": {
+    "prefix": "app-openLoading",
+    "description": "打开加载提示(ShuoXun.js)",
+    "body": [
+      "//打开加载提示",
+      "//###命令:app-openLoading",
+      "app.openLoading()"
+    ]
+  }
+  ,
+  "app.closeLoading": {
+    "prefix": "app-closeLoading",
+    "description": "关闭加载提示(ShuoXun.js)",
+    "body": [
+      "//关闭加载提示",
+      "//###命令:app-closeLoading",
+      "app.closeLoading()"
+    ]
+  }
+  ,
+  "app.openRefresh": {
+    "prefix": "app-openRefresh",
+    "description": "打开下拉刷新(ShuoXun.js)",
+    "body": [
+      "//打开下拉刷新",
+      "//###命令:app-openRefresh",
+      "app.openRefresh()"
+    ]
+  }
+  ,
+  "app.closeRefresh": {
+    "prefix": "app-openRefresh",
+    "description": "关闭下拉刷新(ShuoXun.js)",
+    "body": [
+      "//关闭下拉刷新",
+      "//###命令:app-closeRefresh",
+      "app.closeRefresh()"
+    ]
+  }
+  ,
+  "app.scrollBottom": {
+    "prefix": "app-scrollBottom",
+    "description": "监听上拉加载(ShuoXun.js)",
+    "body": [
+      "//监听上拉加载",
+      "//###命令:app-scrollBottom",
+      "app.scrollBottom()"
+    ]
+  }
+  ,
+  "app.clearHTML": {
+    "prefix": "app-clearHTML",
+    "description": "清除HTML标签(ShuoXun.js)",
+    "body": [
+      "//清除HTML标签",
+      "//@param    原始文本",
+      "//@len      保留文本",
+      "//###命令:app-clearHTML",
+      "app.clearHTML('html', 20)"
+    ]
+  }
+  ,
+  "app.formatDate": {
+    "prefix": "app-formatDate",
+    "description": "格式化日期时间(ShuoXun.js)",
+    "body": [
+      "//格式化日期时间",
+      "//返回标准格式：2019-01-01 18:00:00",
+      "//@param日期时间文本，或者时间戳",
+      "//@isTime       是否返回时间部分",
+      "//###命令:app-formatDate",
+      "app.formatDate('2019/10/01', true)"
+    ]
+  }
+  ,
+  "app.isPhoneNum": {
+    "prefix": "app-isPhoneNum",
+    "description": "验证手机号格式(ShuoXun.js)",
+    "body": [
+      "//验证手机号格式",
+      "//@param手机号文本",
+      "//###命令:app-isPhoneNum",
+      "app.isPhoneNum('13305573088')"
+    ]
+  }
+  ,
+  "app.getImgUrl": {
+    "prefix": "app-getImgUrl",
+    "description": "返回完整的图片URL(ShuoXun.js)",
+    "body": [
+      "//返回完整的图片URL",
+      "//@param图片相对地址",
+      "//###命令:app-getImgUrl",
+      "app.getImgUrl('upload/image.png')"
+    ]
+  }
+  ,
+  "app.chkField": {
+    "prefix": "app-chkField",
+    "description": "检测input合法性并释放焦点(ShuoXun.js)",
+    "body": [
+      "//检测input合法性并释放焦点",
+      "//@param obj    对象是否为空，否则弹出msg提示",
+      "//@param obj2   对象是否与obj一致，否则弹出msg2提示",
+      "//###命令:app-chkField",
+      "app.chkField({",
+      "\t    obj: $api.byId('password'),",
+      "\t    obj2: $api.byId('password2'),",
+      "\t    msg: '请输入密码',",
+      "\t    msg2: '两次密码输入不一致'",
+      "})"
+    ]
+  }
+  ,
+  "app.loginOut": {
+    "prefix": "app-loginOut",
+    "description": "用户注销处理(ShuoXun.js)",
+    "body": [
+      "//用户注销处理",
+      "//###命令:app-loginOut",
+      "app.loginOut()"
+    ]
+  }
+  ,
+  "app.log": {
+    "prefix": "app-log",
+    "description": "控制台带时间打印日志(ShuoXun.js)",
+    "body": [
+      "//控制台带时间打印日志",
+      "//@param输出内容（自动转JSON对象）",
+      "//###命令:app-log",
+      "app.log(ret)"
+    ]
+  }
+  ,
+  "app.html": {
+    "prefix": "app-html",
+    "description": "烁迅标准Html(ShuoXun.js)",
+    "body": [
+      "<!doctype html>",
+      "<html>",
+      "<head>",
+      "    <meta charset='utf-8'>",
+      "    <meta name='viewport'",
+      "        content='maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width' />",
+      "    <meta name='format-detection' content='telephone=no,email=no,date=no,address=no'>",
+      "    <title>APP</title>",
+      "    <link rel='stylesheet' type='text/css' href='../css/aui.css' />",
+      "    <style type='text/css'>",
+      "    </style>",
+      "</head>",
+      "<body>",
+      "    <div id='main'>",
+      "    </div>",
+      "</body>",
+      "<script type='text/javascript' src='../script/api.js'></script>",
+      "<script type='text/javascript' src='../script/shuoxun.js'></script>",
+      "<script type='text/javascript'>",
+      "    apiready = function () {",
+      "        //公共初始化",
+      "        app.apiready(false, false, function (ret, err) {",
+      "        });",
+      "    };",
+      "    //默认数据载入",
+      "    function loadData(reload) {",
+      "    }",
+      "</script>",
+      "</html>"
+    ]
+  }
 }
