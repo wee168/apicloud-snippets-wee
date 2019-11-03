@@ -1,7 +1,8 @@
 # APICloud Snippets Wee(尉海峰18955755996)
-# 2019-11-02
-# 其于beiluo的代码继续封装新的命令
+ 2019-11-03
+ 其于beiluo的代码继续封装新的命令
 
+# 注：app-*函数需配合烁迅公司标准框架(shuoxun.js)使用。
 # 使用示例
 ---
 __api-alert__ <kbd>Tab</kbd>

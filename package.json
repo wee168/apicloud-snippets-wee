@@ -2,7 +2,7 @@
   "name": "apicloud-snippets-wee",
   "publisher": "Wee",
   "description": "APICloud Snippets Wee(尉海峰18955755996)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": { "vscode": "0.10.x" },
   "categories": ["Snippets"], 
   "icon": "images/icon.png",
